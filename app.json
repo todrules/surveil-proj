@@ -1,0 +1,11 @@
+{
+  "name": "Sample Project",
+  "description": "Sample",
+  "repository": "https://github.com/todrules/surveil-proj.git",
+  "logo": "",
+  "keywords": [
+    "ionic2",
+    "heroku",
+    "Angular"
+  ]
+}
