@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-navbar color="primary" style="border-bottom: 4px solid #EB3747;">
+    <ion-title>
+      Incident Report
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row align-items-start justify-content-start>
+      <ion-col align-self-center>
+        <ion-card class="dash-card" style="height: 100%; width: 100%; background-color: #fff; max-width: 1400px;">
+          <ion-card-title style="color: #666; font-weight: 300;">Status:
+            <span style="color: #EB3747; font-weight: 600;" *ngIf="!hasBeenSubmitted">ACTIVE - NOT SUBMITTED</span>
+            <span style="color: #89C402; font-weight: 600;" *ngIf="hasBeenSubmitted">ACTIVE - SUBMITTED</span>
+          </ion-card-title>
+          <ion-card-content>
+            <div fxLayout="row" fxLayoutAlign="start start" fxLayout.sm="column" fxLayout.md="column">
+              <video-comp style="min-height: 360px; max-height: 360px; margin-right: 20px; margin-bottom: 20px;"></video-comp>
+              <div style="width: 100%; min-width: 300px; max-width: 640px; ">
+                <div style="width: 100%; border: 1px solid #BCD4DE; height: 100%; min-width: 300px;" fxLayout="column" fxLayoutAlign="start stretch">
+                  <div style="background-color: #587291; color: #EDF2F4; width: 100%; "><h1 style="color: #EDF2F4; padding: 6px 0 4px 6px; ">Incident Details</h1></div>
+                  
+                  <div style="width: 100%; max-height: 400px; height: 100%;" fxLayout="row"
+                       fxLayoutAlign="space-around start">
+                    <div fxFlex style="color: #2B2D42; background-color: #f2f2f2; font-size: 1.4em;  padding: 4px; border-top: 4px solid #EB3747;">Store Details</div>
+                   
+                  </div>
+                  <div style="width: 100%; max-height: 400px; height: 100%;" fxLayout="row" fxLayoutAlign="space-around start">
+                    <div fxFlex style="color: #587291; font-size: 1.2em; padding: 4px;">Store Number: 52351</div>
+                    <div fxFlex style="color: #587291; font-size: 1.2em; padding: 4px;">Store Address:<br> 123 Elm St, Smalltown, OK 95123</div>
+                  </div>
+                  <div style="width: 100%; max-height: 400px; height: 100%; " fxLayout="row"
+                       fxLayoutAlign="space-around start">
+                    <div fxFlex style="color: #2B2D42; background-color: #f2f2f2; font-size: 1.4em;  padding: 4px;">Employees On Duty</div>
+                  </div>
+                  <div style="width: 100%; max-height: 400px; height: 100%;" fxLayout="row"
+                       fxLayoutAlign="space-around start">
+                    <div fxFlex style="color: #587291; font-size: 1.2em; padding: 4px 0 2px 4px;">Name: Ivan Bulgari</div>
+                    <div fxFlex style="color: #587291; font-size: 1.2em; padding: 4px 0 2px 4px;">Employee ID: 123456
+                    </div>
+                  </div>
+                  <div style="width: 100%; max-height: 400px; height: 100%;" fxLayout="row"
+                       fxLayoutAlign="space-around start">
+                    <div fxFlex style="color: #587291; font-size: 1.2em; padding: 0 0 8px 4px;">Job Title: Asst Mgr
+                    </div>
+                  </div>
+                  <div style="width: 100%; max-height: 400px; height: 100%;" fxLayout="row"
+                       fxLayoutAlign="space-around start">
+                    <div fxFlex style="color: #587291; font-size: 1.2em; padding: 4px 0 2px 4px;">Name: Edgar Ahmeel</div>
+                    <div fxFlex style="color: #587291; font-size: 1.2em; padding: 4px 0 2px 4px;">Employee ID: 234567
+                    </div>
+                  </div>
+                  <div style="width: 100%; max-height: 400px; height: 100%;" fxLayout="row"
+                       fxLayoutAlign="space-around start">
+                    <div fxFlex style="color: #587291; font-size: 1.2em; padding: 0 0 8px 4px;">Job Title: Cashier
+                    </div>
+                  </div>
+                  <div style="width: 100%; max-height: 400px; height: 100%; " fxLayout="row"
+                       fxLayoutAlign="space-around start">
+                    <div fxFlex style="color: #2B2D42; background-color: #f2f2f2; font-size: 1.4em;  padding: 4px;">Daily Sales</div>
+                  </div>
+                  <div style="width: 100%; max-height: 400px; height: 100%;" fxLayout="column"
+                       fxLayoutAlign="start start">
+                    <div style="width: 100%; max-height: 400px; height: 100%; " fxLayout="row"
+                         fxLayoutAlign="space-around start">
+                      <div fxFlex style="color: #587291; font-size: 1.2em; padding: 4px;">Cash Sales: </div>
+                      <div fxFlex style="color: #587291; font-size: 1.2em; padding: 4px; text-align: end;">$5,430.76</div>
+                      <div fxFlex></div>
+                    </div>
+                    <div style="width: 100%; max-height: 400px; height: 100%; " fxLayout="row"
+                         fxLayoutAlign="space-around start">
+                      <div fxFlex style="color: #587291; font-size: 1.2em; padding: 4px;">Deposits:</div>
+                      <div fxFlex style="color: #587291; font-size: 1.2em; padding: 4px; text-align: end;">$5,153.23</div>
+                      <div fxFlex></div>
+                    </div>
+                    <div style="width: 100%; max-height: 400px; height: 100%; " fxLayout="row"
+                         fxLayoutAlign="space-around start">
+                      <div fxFlex style="color: #587291; font-size: 1.2em; padding: 4px;">Cash on Hand:</div>
+                      <div fxFlex style="color: #587291; font-size: 1.2em; padding: 4px; text-align: end;">$277.53</div>
+                      <div fxFlex></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </ion-card-content>
+          <div fxLayout="row" fxLayoutAlign="end end">
+            <button ion-button color="danger" (click)="sendReport()" [disabled]="hasBeenSubmitted">Send Report</button>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  
+  </ion-grid>
+</ion-content>

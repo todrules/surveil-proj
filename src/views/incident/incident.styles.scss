@@ -1,0 +1,14 @@
+@import "../../theme/colors";
+
+page-welcome {
+  .dash-card {
+    min-width: 250px;
+    min-height: 250px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.07);
+    border-radius: 2px;
+    margin: 14px;
+    background-color: map_get(map_get($colors, light), base);
+    padding: 12px;
+  }
+  
+}

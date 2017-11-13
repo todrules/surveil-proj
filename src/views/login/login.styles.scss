@@ -1,0 +1,22 @@
+page-login {
+
+  .splash-bg {
+    position: relative;
+    background: url('/assets/img/bg-soon.png');
+    background-position: left top;
+    background-size: cover;
+    height: 100%;
+    z-index: 1;
+    animation: animatedBackground 50s linear infinite;
+    animation-direction: alternate;
+  }
+
+  @keyframes animatedBackground {
+    0%{
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+}

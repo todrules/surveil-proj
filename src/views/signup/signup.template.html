@@ -1,0 +1,40 @@
+<ion-content style="padding-top: 0; width: 100%; height: 100%;" class="splash-bg"  fxLayout="row" fxLayoutAlign="center center">
+  <div style="width: 100%; height: 100%;" fxLayout="column" fxLayoutAlign="start center">
+    <h1 style="font-size: 48px; font-family: 'Arial Rounded MT Bold', Arial, serif; color: #fff;">signup&deg;</h1>
+    <ion-card style="max-width: 500px; box-shadow: 0 1px 5px rgba(0,0,0,0.07); min-width: 400px;">
+      <ion-card-header>
+        <ion-card-title>Sign up below...</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <form #loginForm="ngForm" autocomplete="off">
+          <ion-list>
+            <ion-item>
+              <ion-label floating>First Name</ion-label>
+              <ion-input color="primary" type="text" #firstName name="firstName" [(ngModel)]="credentials.firstName" autocomplete="new-password"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label floating>Last Name</ion-label>
+              <ion-input color="primary" type="text" #lastName name="lastName" [(ngModel)]="credentials.lastName" autocomplete="new-password"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label floating>Email</ion-label>
+              <ion-input color="primary" type="email" #email name="email" [(ngModel)]="credentials.email" autocomplete="new-password"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label floating>Password</ion-label>
+              <ion-input color="primary" type="password" #password name="password" [(ngModel)]="credentials.password" autocomplete="new-password"></ion-input>
+            </ion-item>
+
+            <div padding>
+              <button ion-button color="primary" (click)="doSignup()" block>Signup</button>
+            </div>
+
+          </ion-list>
+        </form>
+      </ion-card-content>
+      <div style="width: 100%; text-align: center;">
+        <p>Already have an account? Head to our <span (click)="gotoLogin(e)" style="cursor: pointer; text-decoration: underline;">Login</span> page.</p>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>
