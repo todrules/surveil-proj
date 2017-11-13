@@ -1,40 +1,159 @@
-<ion-content style="padding-top: 0; width: 100%; height: 100%;" class="splash-bg"  fxLayout="row" fxLayoutAlign="center center">
-  <div style="width: 100%; height: 100%;" fxLayout="column" fxLayoutAlign="start center">
-    <h1 style="font-size: 48px; font-family: 'Arial Rounded MT Bold', Arial, serif; color: #fff;">signup&deg;</h1>
-    <ion-card style="max-width: 500px; box-shadow: 0 1px 5px rgba(0,0,0,0.07); min-width: 400px;">
+<ion-content class="signup-bg" fxLayout="row" fxLayoutAlign="center center">
+  <div
+    class="signup-col"
+    fxLayout="column"
+    fxLayoutAlign="start center">
+    <img src="/assets/img/surv-logo.png" style="opacity: 0.2; width: 300px; position: absolute; top: 60%; left: 50%; margin-left: -150px;">
+    <h1 class="signup-title">Sign-up</h1>
+    
+    <ion-card class="signup-card">
+      
       <ion-card-header>
-        <ion-card-title>Sign up below...</ion-card-title>
+        <ion-card-title>Please register below...</ion-card-title>
       </ion-card-header>
+      
       <ion-card-content>
-        <form #loginForm="ngForm" autocomplete="off">
+        
+        <div
+          *ngIf="(email.dirty || email.touched) && email.invalid"
+          class="form-error">
+          <div
+            *ngIf="email.errors.required"
+            class="form-error">
+            Email is required.
+          </div>
+          <div
+            *ngIf="email.errors.minlength"
+            class="form-error">
+            Email must be a minimum of 5 characters.
+          </div>
+        </div>
+        <div
+          *ngIf="(password.dirty || password.touched) && password.invalid">
+          <div
+            *ngIf="password.errors.required"
+            class="form-error">
+            Password is required.
+          </div>
+          <div
+            *ngIf="password.errors.minlength"
+            class="form-error">
+            Password must be a minimum of 6 characters.
+          </div>
+        </div>
+        <div
+          *ngIf="(firstName.dirty || firstName.touched) && firstName.invalid"
+          class="form-error">
+          <div
+            *ngIf="firstName.errors.required"
+            class="form-error">
+            First name is required.
+          </div>
+          <div
+            *ngIf="firstName.errors.minlength"
+            class="form-error">
+            First name must be a minimum of 2 characters.
+          </div>
+        </div>
+        <div
+          *ngIf="(lastName.dirty || lastName.touched) && lastName.invalid">
+          <div
+            *ngIf="lastName.errors.required"
+            class="form-error">
+            Last name is required.
+          </div>
+          <div
+            *ngIf="lastName.errors.minlength"
+            class="form-error">
+            Last name must be a minimum of 2 characters.
+          </div>
+        </div>
+        
+        <form #signupForm="ngForm" autocomplete="off">
+          
           <ion-list>
+            
             <ion-item>
               <ion-label floating>First Name</ion-label>
-              <ion-input color="primary" type="text" #firstName name="firstName" [(ngModel)]="credentials.firstName" autocomplete="new-password"></ion-input>
+              <ion-input
+                color="primary"
+                type="text"
+                #firstName="ngModel"
+                name="firstName"
+                [(ngModel)]="credentials.firstName"
+                autocomplete="new-password"
+                required
+                minLength="2">
+              </ion-input>
             </ion-item>
+            
             <ion-item>
               <ion-label floating>Last Name</ion-label>
-              <ion-input color="primary" type="text" #lastName name="lastName" [(ngModel)]="credentials.lastName" autocomplete="new-password"></ion-input>
+              <ion-input
+                color="primary"
+                type="text"
+                #lastName="ngModel"
+                name="lastName"
+                [(ngModel)]="credentials.lastName"
+                autocomplete="new-password"
+                required
+                minLength="2">
+              </ion-input>
             </ion-item>
+            
             <ion-item>
               <ion-label floating>Email</ion-label>
-              <ion-input color="primary" type="email" #email name="email" [(ngModel)]="credentials.email" autocomplete="new-password"></ion-input>
+              <ion-input
+                color="primary"
+                type="email"
+                #email="ngModel"
+                name="email"
+                [(ngModel)]="credentials.email"
+                autocomplete="new-password"
+                required
+                minLength="5">
+              </ion-input>
             </ion-item>
+            
+            
             <ion-item>
               <ion-label floating>Password</ion-label>
-              <ion-input color="primary" type="password" #password name="password" [(ngModel)]="credentials.password" autocomplete="new-password"></ion-input>
+              <ion-input
+                color="primary"
+                type="password"
+                #password="ngModel"
+                name="password"
+                [(ngModel)]="credentials.password"
+                autocomplete="new-password"
+                required
+                minLength="6">
+              </ion-input>
             </ion-item>
-
+            
             <div padding>
-              <button ion-button color="primary" (click)="doSignup()" block>Signup</button>
+              <button
+                ion-button
+                color="success"
+                (click)="signup()"
+                [disabled]="signupForm.invalid"
+                block>
+                Signup
+              </button>
             </div>
-
+          
           </ion-list>
         </form>
+      
       </ion-card-content>
-      <div style="width: 100%; text-align: center;">
-        <p>Already have an account? Head to our <span (click)="gotoLogin(e)" style="cursor: pointer; text-decoration: underline;">Login</span> page.</p>
+      
+      <div class="signup-footer">
+        <p>
+          Already have an account? Head to our <span (click)="gotoLogin(e)"
+                                 class="signup-footer-link">Login</span> page.
+        </p>
       </div>
+    
     </ion-card>
+  
   </div>
 </ion-content>

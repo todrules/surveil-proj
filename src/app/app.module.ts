@@ -3,28 +3,49 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { IonicStorageModule } from '@ionic/storage';
 
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { CoreModule } from '../core/core.module';
+import { SharedModule } from '../shared/shared.module';
+import { StateModule } from '../state/state.module';
+import { ViewsModule } from '../views/views.module';
+
+import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [
-    MyApp,
-    HomePage
-  ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
-  ],
-  bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    HomePage
+    IonicModule.forRoot(AppComponent),
+    IonicStorageModule.forRoot({
+      name: '__sample_proj',
+      driverOrder: ['indexeddb', 'sqlite', 'websql']
+    }),
+    
+    CoreModule.forRoot(),
+    StateModule.forRoot(),
+    SharedModule,
+    ViewsModule
   ],
   providers: [
     StatusBar,
-    SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+    SplashScreen, {
+      provide: ErrorHandler,
+      useClass: IonicErrorHandler
+    }
+  ],
+  declarations: [
+    AppComponent
+  ],
+  entryComponents: [
+    AppComponent
+  ],
+  exports: [
+    IonicModule,
+    IonicStorageModule,
+    StateModule,
+    SharedModule,
+    ViewsModule
+  ],
+  bootstrap: [IonicApp]
 })
 export class AppModule {}

@@ -1,7 +1,9 @@
 import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core';
 import { IonicApp, IonicModule }                             from 'ionic-angular';
 import { CommonModule }                                      from '@angular/common';
-import { NotifyService }                                     from './notify';
+import { ErrorHandlerService } from './error-handler.service';
+import { LoadingService } from './loading.service';
+import { NotifyService }                                     from './notify.service';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { NotifyService }                                     from './notify';
 
   ],
   providers: [
-    NotifyService
+    NotifyService,
+    ErrorHandlerService,
+    LoadingService
   ],
   entryComponents: [
 

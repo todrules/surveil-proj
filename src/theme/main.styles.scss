@@ -1,0 +1,56 @@
+@import "variables";
+@import "ionic.globals";
+@import "ionic.theme.default";
+@import "ionic.ionicons";
+@import "roboto";
+@import "noto-sans";
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Light"), local("Roboto-Light"), url("../assets/fonts/Roboto-Light.ttf") format("truetype"), url("../assets/fonts/roboto-light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url("../assets/fonts/Roboto-Light.ttf") format("truetype"), url("../assets/fonts/roboto-light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Roboto Medium"), local("Roboto-Medium"), url("../assets/fonts/Roboto-Light.ttf") format("truetype"), url("../assets/fonts/roboto-light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto Bold";
+  font-style: normal;
+  font-weight: 800;
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("../assets/fonts/Roboto-Bold.ttf") format("truetype"), url("../assets/fonts/roboto-bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Kanit Bold";
+  font-style: normal;
+  font-weight: 800;
+  src: local("Kanit Bold"), local("Kanit-Bold"), url("../assets/fonts/Kanit-Bold.ttf") format("truetype");
+}
+
+.invis-scroll::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+
+.topnav {
+  overflow: hidden;
+}
+
+.form-error {
+  color: map_get(map_get($colors, danger), base);
+}
+
+

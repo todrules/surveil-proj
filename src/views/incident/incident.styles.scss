@@ -1,14 +1,97 @@
 @import "../../theme/colors";
 
-page-welcome {
+incident-comp {
   .dash-card {
     min-width: 250px;
     min-height: 250px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.07);
     border-radius: 2px;
     margin: 14px;
-    background-color: map_get(map_get($colors, light), base);
+    background-color: map_get(map_get($colors, frost), base);
     padding: 12px;
+    height: 100%;
+    width: 100%;
+    max-width: 1280px;
   }
   
+  .logo-style {
+    opacity: 0.2;
+    width: 300px;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    margin-left: -150px;
+  }
+  
+  .incident-bg {
+    background-color: map_get(map_get($colors, dark), base);
+    padding-top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .incident-text {
+    color: map_get(map_get($colors, dark), base);
+    font-size: 1.2em;
+    padding: 4px;
+  }
+  
+  .incident-row {
+    width: 100%;
+    max-height: 400px;
+    height: 100%;
+    background-color: map_get(map_get($colors, frost), base);
+  }
+  
+  .report-table {
+    width: 100%;
+    border: 1px solid map_get(map_get($colors, slate), base);
+    height: 100%;
+    min-width: 300px;
+  }
+  
+  .success {
+    color: map_get(map_get($colors, success), base);
+    font-weight: 400;
+  }
+  
+  .danger {
+    color: map_get(map_get($colors, danger), base);
+    font-weight: 400;
+  }
+  
+  .video-style {
+    min-height: 360px;
+    max-height: 360px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .main-table {
+    width: 100%;
+    min-width: 450px;
+    max-width: 640px;
+  }
+  
+  .table-header {
+    background-color: map_get(map_get($colors, slate), base);
+    color: map_get(map_get($colors, ash), base);
+    width: 100%;
+  }
+  
+  .table-title {
+    color: map_get(map_get($colors, light), base);
+    padding: 6px 0 4px 6px;
+  }
+  
+  .table-subheader {
+    color: map_get(map_get($colors, dark), base);
+    background-color: map_get(map_get($colors, accent), base);
+    font-size: 1.4em;
+    padding: 4px;
+  }
+  
+  .squeeze-row {
+    padding: 4px 0 2px 4px;
+  }
 }

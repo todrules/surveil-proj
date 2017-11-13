@@ -1,0 +1,23 @@
+.overlay-text {
+  color: #fff;
+  font-weight: 600;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.video-overlay {
+  margin-top: -365px;
+  left: 0;
+  height: 80px;
+  max-height: 80px;
+  overflow: visible;
+  position: relative;
+  width: 640px;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  padding: 4px;
+}
+
+.video-layout {
+  width: 640px;
+  height: 360px;
+}

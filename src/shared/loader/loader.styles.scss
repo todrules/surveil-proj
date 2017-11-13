@@ -1,0 +1,115 @@
+@import "../../theme/variables";
+
+loader-comp {
+  
+  .container {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 50;
+    background-color: rgba(11, 57, 84, 0.7);
+    font-family: $font-family-base;
+  }
+  
+  .loader {
+    height: 30px;
+    width: 300px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  
+  .loader-square {
+    animation-name: loader;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    height: 20px;
+    width: 20px;
+    opacity: 0.9;
+    border-radius: 0;
+    position: absolute;
+  }
+
+  .loader-square:nth-child(2) {
+    background-color: map_get(map_get($colors, light), base);
+    animation-delay: 0.4s;
+  }
+  .loader-square:nth-child(3) {
+    background-color: map_get(map_get($colors, danger), base);
+    animation-delay: 0.3s;
+  }
+  .loader-square:nth-child(4) {
+    background-color: map_get(map_get($colors, success), base);
+    animation-delay: 0.2s;
+  }
+  .loader-square:nth-child(5) {
+    background-color: map_get(map_get($colors, secondary), base);
+    animation-delay: 0.1s;
+  }
+  .loader-square:nth-child(6) {
+    background-color: map_get(map_get($colors, accent), base);
+    animation-delay: 0s;
+  }
+  
+  
+  @keyframes loader {
+    0% {
+      transition: all 1.5s ease-in-out;
+      transform: translateX(0);
+    }
+    50% {
+      transition: all 1.5s ease-in-out;
+      transform: translateX(300px);
+    }
+    100% {
+      transition: all 1.5s ease-in-out;
+      transform: translateX(0);
+    }
+  }
+ 
+  
+}
+
+/*==================================================
+ * Effect 6 - Slight puffed effect
+ * ===============================================*/
+.effect6 {
+  position: relative;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect6:before, .effect6:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8) inset;
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8) inset;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8) inset;
+  top: 50%;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  -moz-border-radius: 100px / 10px;
+  border-radius: 100px / 10px;
+}
+
+.effect6:after {
+  right: 10px;
+  left: auto;
+  -webkit-transform: skew(8deg) rotate(3deg);
+  -moz-transform: skew(8deg) rotate(3deg);
+  -ms-transform: skew(8deg) rotate(3deg);
+  -o-transform: skew(8deg) rotate(3deg);
+  transform: skew(8deg) rotate(3deg);
+}

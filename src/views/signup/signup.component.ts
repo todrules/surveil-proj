@@ -1,59 +1,83 @@
 import { Component } from '@angular/core';
 import { NavController, ToastController } from 'ionic-angular';
-import { LoginPage } from '../login/login';
-
-
+import { User } from '../../config/interfaces';
+import { AppStateService } from '../../state/app.state';
+import { IncidentComponent } from '../incident/incident.component';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
-  selector: 'page-signup',
-  templateUrl: 'signup.html'
+  selector: 'signup-comp',
+  templateUrl: './signup.template.html'
 })
-export class SignupPage {
+export class SignupComponent {
 
-  public static title = 'Signup';
   public credentials = {
     firstName: '',
     lastName: '',
     email: '',
     password: ''
   };
+  
+  private user: User = {
+    isAuth: false,
+    email: '',
+    password: '',
+    name: {
+      firstName: 'Anon User',
+      lastName: '',
+      nickName: ''
+    }
+  };
+  
+  private readonly successMsg = 'Successfully registered!';
 
-  constructor(private navCtrl: NavController, private toastCtrl: ToastController) {
+  constructor(
+    private navCtrl: NavController,
+    private toastCtrl: ToastController,
+    private appStateServ: AppStateService) {
+  
+    this.appStateServ.changes.subscribe((state) => {
+      this.user = state.user;
+    });
 
   }
 
-  public gotoLogin (event) {
-    this.navCtrl.push(LoginPage);
+  public gotoLogin = (event) => {
+    this.navCtrl.push(LoginComponent);
+  };
+  
+  public signup = () => {
+    this.appStateServ.startLoading();
+    // save the credentials
+    this.appStateServ.setState({
+      isLoading: true,
+      timestamp: new Date(Date.now()).toLocaleTimeString(),
+      user: {
+        isAuth: false,
+        email: this.credentials.email,
+        password: this.credentials.password,
+        name: {
+          firstName: this.credentials.firstName,
+          lastName: this.credentials.lastName
+        }
+      }
+    });
+    
+    setTimeout(() => {
+      this.appStateServ.stopLoading();
+      this.signupSuccess();
+      this.navCtrl.push(LoginComponent);
+    }, 3000);
   }
-
-  private _signupSuccess () {
+  
+  private signupSuccess = () => {
     const toast = this.toastCtrl.create({
-      message: 'Successfully signed up!',
+      message: this.successMsg,
       duration: 3000,
       position: 'bottom'
     });
     toast.present();
-  }
+  };
 
-  private _signupError (errMsg: string): void {
-    const toast = this.toastCtrl.create({
-      message: errMsg,
-      duration: 3000,
-      position: 'bottom'
-    });
-    toast.present();
-  }
-
-  doSignup() {
-    /*
-    this.empService.employeeCreate(this.credentials).map(res => {
-      const profile = res;
-      this._signupSuccess();
-      this.navCtrl.push(LoginPage);
-    }).catch(err => {
-      this._signupError(err);
-      return err;
-    }).subscribe();
-    */
-  }
+  
 }
