@@ -34,11 +34,19 @@ Pretty self-explanatory. Fill in the fields and then submit. Some items to notic
 
 `The other parts of the app all have a similar flow.`
 
-## Incident Report
+## Dashboard
 
-* Embeds a Youtube video (with a custom overlay) to be played back.
-* Mock report.
-* Mock "Send Report" button (which also uses the flow above).
+* Examples of using Google Charts.
+
+## Vision - Face Detection
+
+`NOTE: I did NOT create the library that was used for the actual face detection`
+
+`NOTE: You may have to grant permission for the site to use your webcam`
+
+* This component uses machine learning techniques to detect faces
+* Permission needs to be granted in order to use it.
+* Just click the Start button to get it working.
 
 #### Comments
 A well-designed UI doesn't need a tutorial to explain how to use it. I also believe that well-written code should be self-explanatory and needs few comments, so there's not a ton of comments in my code.
@@ -59,7 +67,7 @@ You can email me at [todd@digitaltech.pro](mailto:todd@digitaltech.pro) or give 
 
 #### Known Issues & Items Dropped from Scope
 
-* No Logout (If you need to logout, you can delete the localstorage data)
+
 * No unit tests
 * No back-end authentication service
 * No other auth or user management functions
