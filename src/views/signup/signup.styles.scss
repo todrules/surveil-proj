@@ -10,7 +10,7 @@ signup-comp {
   }
   
   .signup-text {
-    color: map_get(map_get($colors, accent), base);
+    color: map_get(map_get($colors, mustard), base);
     
   }
   
@@ -29,6 +29,7 @@ signup-comp {
     max-width: 500px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.07);
     min-width: 400px;
+    border-radius: 14px;
   }
   
   .signup-footer {

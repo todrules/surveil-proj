@@ -1,0 +1,54 @@
+<ion-content class="incident-bg"
+             fxLayout="row"
+             fxLayoutAlign="center center"
+             padding>
+  <img src="/assets/img/surv-logo.png" class="logo-style">
+  <ion-grid style="height: 54px; width:100%;">
+    <ion-row style="width: 100%;">
+      <ion-col style="width: 100%; height: 54px;">
+        <i class="material-icons" style="color: #E8EEF2; cursor: pointer;" menuToggle>menu</i>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        <ion-card class="dash-card">
+          <ion-card-title class="vision-text">Face Recognition</ion-card-title>
+          <ion-card-content>
+            <video autoplay playsinline loop preload="auto" #webcam width="640" height="480" style="display: none;"></video>
+           
+            <div class="canvas-cont">
+              <canvas #mycanvas width="640" height="480" style="padding: 0; margin: 0;"></canvas>
+            </div>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <button
+                    ion-button
+                    color="success"
+                    block
+                    (click)="start()"
+                    [disabled]="!isReady">
+                    Start
+                  </button>
+                </ion-col>
+                <ion-col>
+                  <button
+                    ion-button
+                    color="danger"
+                    (click)="stop()" block>
+                    Stop
+                  </button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>

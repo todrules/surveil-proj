@@ -1,46 +1,50 @@
 $colors: (
   primary: (
     base: #0B3954,
-    contrast: #F5F1ED
+    contrast: #FDFFFC
   ),
   secondary: (
-    base: #B1F8F2,
-    contrast: #270722
+    base: #2F2C38,
+    contrast: #FDFFFC
   ),
   accent: (
-    base: #E3E7AF,
-    contrast: #270722
+    base: #59A5D8,
+    contrast: #FDFFFC
   ),
   danger: (
-    base: #FF1E70,
-    contrast: #F5F1ED
+    base: #D7263D,
+    contrast: #FDFFFC
   ),
   success: (
     base: #BCD39C,
     contrast: #270722
   ),
-  slate: (
-    base: #A2A77F,
-    contrast: #270722
+  grape: (
+    base: #912F56,
+    contrast: #FDFFFC
   ),
-  shadow: (
-    base: #474044,
-    contrast: #F5F1ED
+  mustard: (
+    base: #FFC857,
+    contrast: #FDFFFC
   ),
-  light: (
-    base: #F0F0C9,
-    contrast: #270722
+  seafoam: (
+    base: #177E89,
+    contrast: #FDFFFC
   ),
   ash: (
-    base: #EDF2F4,
+    base: #E8EEF2,
     contrast: #270722
   ),
   frost: (
-    base: #F5F1ED,
+    base: #F3F7F0,
+    contrast: #270722
+  ),
+  light: (
+    base: #FDFFFC,
     contrast: #270722
   ),
   dark: (
     base: #270722,
-    contrast: #F5F1ED
+    contrast: #FDFFFC
   )
 );

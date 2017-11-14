@@ -5,6 +5,7 @@ import { IonicApp, IonicModule } from 'ionic-angular';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { LoaderComponent } from './loader/loader.component';
+import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 
 // Observable class extensions
 import 'rxjs/add/observable/of';
@@ -28,7 +29,8 @@ import 'rxjs/add/operator/pluck';
     IonicModule,
     IonicStorageModule,
     FormsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    Ng2GoogleChartsModule
   ],
   declarations: [
     LoaderComponent
@@ -41,7 +43,8 @@ import 'rxjs/add/operator/pluck';
     IonicStorageModule,
     FormsModule,
     FlexLayoutModule,
-    LoaderComponent
+    LoaderComponent,
+    Ng2GoogleChartsModule
   ]
 })
 export class SharedModule { }

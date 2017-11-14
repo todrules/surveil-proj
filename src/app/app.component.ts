@@ -8,6 +8,7 @@ import { AppStateService } from '../state/app.state';
 import { IncidentComponent } from '../views/incident/incident.component';
 import { LoginComponent } from '../views/login/login.component';
 import { SignupComponent } from '../views/signup/signup.component';
+import { Vision } from '../views/vision/vision';
 
 @Component({
   selector: 'ion-app',
@@ -17,7 +18,7 @@ export class AppComponent {
   
   @ViewChild(Nav) nav: Nav;
   
-  public rootPage:any = IncidentComponent;
+  public rootPage:any = LoginComponent;
   public views: Array<{ title: string, component: any }>;
   public isLoading: boolean;
   
@@ -37,21 +38,14 @@ export class AppComponent {
   }
   
   private initializeApp = () => {
-    
-    // Configure views/screen array for menu links
-    this.views = [
-      { title: 'Welcome', component: IncidentComponent },
-      { title: 'Signup', component: SignupComponent },
-      { title: 'Login', component: LoginComponent }
-    ];
+
     this.appStateService.startLoading();
     /*
      When device is ready, check if platform is Cordova (Android, iOS, and Win Phone).
      If true, then 'do stuff'
      */
     this.platform.ready().then((readySource) => {
-      
-      this.openPage(this.rootPage);
+
       
       if(this.platform.is('cordova')) {
         // Stuff being done
@@ -61,14 +55,6 @@ export class AppComponent {
     });
   };
   
-  public openPage = (view: MenuLink) => {
-    this.nav.setRoot(view.component).catch((reason) => {
-      this.nav.setRoot(SignupComponent);
-      // Simulating network lag
-      setTimeout(() => {
-        this.appStateService.stopLoading();
-      }, 2000);
-    });
-  };
+  
 }
 

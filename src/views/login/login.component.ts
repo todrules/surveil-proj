@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, ToastController } from 'ionic-angular';
 import { User } from '../../config/interfaces';
 import { AppStateService } from '../../state/app.state';
+import { Dashboard } from '../dashboard/dashboard.component';
 import { IncidentComponent } from '../incident/incident.component';
 import { SignupComponent } from '../signup/signup.component';
 
@@ -55,7 +56,7 @@ export class LoginComponent {
         state.user.isAuth = true;
         state.timestamp = new Date(Date.now()).toLocaleTimeString();
         this.appStateServ.setState(state);
-        this.navCtrl.push(IncidentComponent);
+        this.navCtrl.push(Dashboard);
         
       } else {
         this.appStateServ.stopLoading();

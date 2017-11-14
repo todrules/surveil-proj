@@ -8,7 +8,7 @@ export const initialAppState: AppState = {
   isLoading: false,
   timestamp: new Date(Date.now()).toLocaleTimeString(),
   user: {
-    isAuth: true,
+    isAuth: false,
     email: null,
     password: null,
     name: {

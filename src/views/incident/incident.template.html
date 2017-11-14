@@ -12,116 +12,116 @@
       
       
       
-  <ion-grid style="margin-top: 60px;">
-    
-    <ion-row align-items-start justify-content-start>
-      
-      <ion-col fxlayoutalign="center center" fxlayout="column">
-        
-        <ion-card class="dash-card" >
+        <ion-grid style="margin-top: 60px;">
           
-          <ion-card-title style="color: #453A49; font-weight: 300;">
-            Status:
-            <span class="danger" *ngIf="!hasBeenSubmitted">
-              ACTIVE - NOT SUBMITTED</span>
-            <span class="sucess" *ngIf="hasBeenSubmitted">
-              ACTIVE - SUBMITTED</span>
-          </ion-card-title>
-          
-          <ion-card-content>
+          <ion-row align-items-start justify-content-start>
             
-            <div
-              fxLayout="row"
-              fxLayoutAlign="start start"
-              fxLayout.sm="column"
-              fxLayout.md="column">
+            <ion-col fxlayoutalign="center center" fxlayout="column">
               
-              <video-comp class="video-style"></video-comp>
-              
-              <div class="main-table">
+              <ion-card class="dash-card" >
                 
-                <div
-                  class="report-table"
-                  fxLayout="column"
-                  fxLayoutAlign="start stretch">
+                <ion-card-title style="color: #453A49; font-weight: 300;">
+                  Status:
+                  <span class="danger" *ngIf="!hasBeenSubmitted">
+                    ACTIVE - NOT SUBMITTED</span>
+                  <span class="sucess" *ngIf="hasBeenSubmitted">
+                    ACTIVE - SUBMITTED</span>
+                </ion-card-title>
+                
+                <ion-card-content>
                   
-                  <div class="table-header">
-                    <h1 class="table-title">Incident Details</h1>
+                  <div
+                    fxLayout="row"
+                    fxLayoutAlign="start start"
+                    fxLayout.sm="column"
+                    fxLayout.md="column">
+                    
+                    <video-comp class="video-style"></video-comp>
+                    
+                    <div class="main-table">
+                      
+                      <div
+                        class="report-table"
+                        fxLayout="column"
+                        fxLayoutAlign="start stretch">
+                        
+                        <div class="table-header">
+                          <h1 class="table-title">Incident Details</h1>
+                        </div>
+                        
+                        <div class="incident-row" fxLayout="row"
+                             fxLayoutAlign="space-around start">
+                          <div fxFlex class="table-subheader">Store Details</div>
+                         
+                        </div>
+                        <div class="incident-row" fxLayout="row" fxLayoutAlign="space-around start">
+                          <div fxFlex class="incident-text">Store Number: 52351</div>
+                          <div fxFlex class="incident-text">Store Address:<br> 123 Elm St, Smalltown, OK 95123</div>
+                        </div>
+                        <div class="incident-row" fxLayout="row"
+                             fxLayoutAlign="space-around start">
+                          <div fxFlex class="table-subheader">Employees On Duty</div>
+                        </div>
+                        <div class="incident-row" fxLayout="row"
+                             fxLayoutAlign="space-around start">
+                          <div fxFlex class="incident-text squeeze-row">Name: Ivan Bulgari</div>
+                          <div fxFlex class="incident-text squeeze-row">Employee ID: 123456
+                          </div>
+                        </div>
+                        <div class="incident-row" fxLayout="row"
+                             fxLayoutAlign="space-around start">
+                          <div fxFlex class="incident-text" style="padding: 0 0 8px 4px;">Job Title: Asst Mgr
+                          </div>
+                        </div>
+                        <div class="incident-row" fxLayout="row"
+                             fxLayoutAlign="space-around start">
+                          <div fxFlex class="incident-text squeeze-row" >Name: Edgar Ahmeel</div>
+                          <div fxFlex class="incident-text squeeze-row" >Employee ID: 234567
+                          </div>
+                        </div>
+                        <div class="incident-row" fxLayout="row"
+                             fxLayoutAlign="space-around start">
+                          <div fxFlex class="incident-text" style="padding: 0 0 8px 4px;">Job Title: Cashier
+                          </div>
+                        </div>
+                        <div class="incident-row" fxLayout="row"
+                             fxLayoutAlign="space-around start">
+                          <div fxFlex class="table-subheader">Daily Sales</div>
+                        </div>
+                        <div class="incident-row" fxLayout="column"
+                             fxLayoutAlign="start start">
+                          <div class="incident-row" fxLayout="row"
+                               fxLayoutAlign="space-around start">
+                            <div fxFlex class="incident-text">Cash Sales: </div>
+                            <div fxFlex class="incident-text" style="text-align: end;">$5,430.76</div>
+                            <div fxFlex></div>
+                          </div>
+                          <div class="incident-row" fxLayout="row"
+                               fxLayoutAlign="space-around start">
+                            <div fxFlex class="incident-text">Deposits:</div>
+                            <div fxFlex class="incident-text" style="text-align: end;">$5,153.23</div>
+                            <div fxFlex></div>
+                          </div>
+                          <div class="incident-row" fxLayout="row"
+                               fxLayoutAlign="space-around start">
+                            <div fxFlex class="incident-text">Cash on Hand:</div>
+                            <div fxFlex class="incident-text" style="text-align: end;">$277.53</div>
+                            <div fxFlex></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   
-                  <div class="incident-row" fxLayout="row"
-                       fxLayoutAlign="space-around start">
-                    <div fxFlex class="table-subheader">Store Details</div>
-                   
-                  </div>
-                  <div class="incident-row" fxLayout="row" fxLayoutAlign="space-around start">
-                    <div fxFlex class="incident-text">Store Number: 52351</div>
-                    <div fxFlex class="incident-text">Store Address:<br> 123 Elm St, Smalltown, OK 95123</div>
-                  </div>
-                  <div class="incident-row" fxLayout="row"
-                       fxLayoutAlign="space-around start">
-                    <div fxFlex class="table-subheader">Employees On Duty</div>
-                  </div>
-                  <div class="incident-row" fxLayout="row"
-                       fxLayoutAlign="space-around start">
-                    <div fxFlex class="incident-text squeeze-row">Name: Ivan Bulgari</div>
-                    <div fxFlex class="incident-text squeeze-row">Employee ID: 123456
-                    </div>
-                  </div>
-                  <div class="incident-row" fxLayout="row"
-                       fxLayoutAlign="space-around start">
-                    <div fxFlex class="incident-text" style="padding: 0 0 8px 4px;">Job Title: Asst Mgr
-                    </div>
-                  </div>
-                  <div class="incident-row" fxLayout="row"
-                       fxLayoutAlign="space-around start">
-                    <div fxFlex class="incident-text squeeze-row" >Name: Edgar Ahmeel</div>
-                    <div fxFlex class="incident-text squeeze-row" >Employee ID: 234567
-                    </div>
-                  </div>
-                  <div class="incident-row" fxLayout="row"
-                       fxLayoutAlign="space-around start">
-                    <div fxFlex class="incident-text" style="padding: 0 0 8px 4px;">Job Title: Cashier
-                    </div>
-                  </div>
-                  <div class="incident-row" fxLayout="row"
-                       fxLayoutAlign="space-around start">
-                    <div fxFlex class="table-subheader">Daily Sales</div>
-                  </div>
-                  <div class="incident-row" fxLayout="column"
-                       fxLayoutAlign="start start">
-                    <div class="incident-row" fxLayout="row"
-                         fxLayoutAlign="space-around start">
-                      <div fxFlex class="incident-text">Cash Sales: </div>
-                      <div fxFlex class="incident-text" style="text-align: end;">$5,430.76</div>
-                      <div fxFlex></div>
-                    </div>
-                    <div class="incident-row" fxLayout="row"
-                         fxLayoutAlign="space-around start">
-                      <div fxFlex class="incident-text">Deposits:</div>
-                      <div fxFlex class="incident-text" style="text-align: end;">$5,153.23</div>
-                      <div fxFlex></div>
-                    </div>
-                    <div class="incident-row" fxLayout="row"
-                         fxLayoutAlign="space-around start">
-                      <div fxFlex class="incident-text">Cash on Hand:</div>
-                      <div fxFlex class="incident-text" style="text-align: end;">$277.53</div>
-                      <div fxFlex></div>
-                    </div>
-                  </div>
+                </ion-card-content>
+                <div fxLayout="row" fxLayoutAlign="end end">
+                  <button ion-button color="success" (click)="sendReport()" [disabled]="hasBeenSubmitted">Send Report</button>
                 </div>
-              </div>
-            </div>
-            
-          </ion-card-content>
-          <div fxLayout="row" fxLayoutAlign="end end">
-            <button ion-button color="success" (click)="sendReport()" [disabled]="hasBeenSubmitted">Send Report</button>
-          </div>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  
-  </ion-grid>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        
+        </ion-grid>
       </ion-col>
       <ion-col></ion-col>
     </ion-row>

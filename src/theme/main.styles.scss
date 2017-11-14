@@ -4,6 +4,7 @@
 @import "ionic.ionicons";
 @import "roboto";
 @import "noto-sans";
+@import "./icons/ionicons";
 
 @font-face {
   font-family: "Roboto";
@@ -39,6 +40,7 @@
   font-weight: 800;
   src: local("Kanit Bold"), local("Kanit-Bold"), url("../assets/fonts/Kanit-Bold.ttf") format("truetype");
 }
+
 
 .invis-scroll::-webkit-scrollbar {
   width: 0;
