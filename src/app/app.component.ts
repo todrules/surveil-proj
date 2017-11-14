@@ -63,7 +63,7 @@ export class AppComponent {
   
   public openPage = (view: MenuLink) => {
     this.nav.setRoot(view.component).catch((reason) => {
-      this.nav.setRoot(LoginComponent);
+      this.nav.setRoot(SignupComponent);
       // Simulating network lag
       setTimeout(() => {
         this.appStateService.stopLoading();
